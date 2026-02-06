@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tahiti Travel</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img class="logo" src="assets/images/logo.svg" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#discover"
+                  >Discover</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#travel">Travel Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="slick-slider-container">
+          <div class="slider">
+            <div>
+              <img src="assets/images/hero-main.webp" alt="Tahiti Image 1" />
+            </div>
+            <div>
+              <img
+                src="assets/images/hero-main2_resized.webp"
+                alt="Tahiti Image 2"
+              />
+            </div>
+          </div>
+          <div class="hero-content text-center">
+            <h1 class="hero-content-title"><span>WELCOME</span> TO TAHITI</h1>
+            <p class="hero-content-desc">Your vacation starts here</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="islands-section" id="discover">
+        <div class="container">
+          <div class="section-text">
+            <h3 class="section-title"><span>Discover</span> Tahiti</h3>
+            <p class="section-subtitle">
+              Just pick your destination. Our travel experts will take care of
+              the rest.
+            </p>
+          </div>
+          <div class="islands-wrapper">
+            <div class="islands-slider">
+              <a href="#" class="island-card">
+                <img src="assets/images/isl1.webp" alt="Bora Bora" />
+                <div class="island-card-content">
+                  <h3 class="island-card-title">BORA BORA</h3>
+                  <p class="island-card-desc">
+                    Surrounded by sand-fringed motus and a turquoise lagoon
+                    protected by a coral reef, Bora Bora is known...
+                  </p>
+                </div>
+                <div class="island-card-button">
+                  <span>
+                    <span class="price-label">FROM</span>
+                    <span class="price-value">$2,500</span>
+                  </span>
+                  <span class="arrow">→</span>
+                </div>
+              </a>
+
+              <a href="#" class="island-card">
+                <img src="assets/images/isl2.webp" alt="Moorea" />
+                <div class="island-card-content">
+                  <h3 class="island-card-title">MOOREA</h3>
+                  <p class="island-card-desc">
+                    Mo'orea is a South Pacific island, part of French
+                    Polynesia's Society Islands archipelago. It's known for...
+                  </p>
+                </div>
+                <div class="island-card-button">
+                  <span>
+                    <span class="price-label">FROM</span>
+                    <span class="price-value">$2,500</span>
+                  </span>
+                  <span class="arrow">→</span>
+                </div>
+              </a>
+
+              <a href="#" class="island-card">
+                <img src="assets/images/isl3.webp" alt="Ra'iātea" />
+                <div class="island-card-content">
+                  <h3 class="island-card-title">RA'IĀTEA</h3>
+                  <p class="island-card-desc">
+                    Ra'iātea, is the second largest of the Society Islands in
+                    French Polynesia. The island is widely regarded as...
+                  </p>
+                </div>
+                <div class="island-card-button">
+                  <span>
+                    <span class="price-label">FROM</span>
+                    <span class="price-value">$2,500</span>
+                  </span>
+                  <span class="arrow">→</span>
+                </div>
+              </a>
+
+              <a href="#" class="island-card">
+                <img src="assets/images/isl4.webp" alt="Taha'a" />
+                <div class="island-card-content">
+                  <h3 class="island-card-title">TAHA'A</h3>
+                  <p class="island-card-desc">
+                    Taha'a is an island located among the western group, the
+                    Leeward Islands, of the Society Islands in...
+                  </p>
+                </div>
+                <div class="island-card-button">
+                  <span>
+                    <span class="price-label">FROM</span>
+                    <span class="price-value">$2,500</span>
+                  </span>
+                  <span class="arrow">→</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <p class="offer-text text-center">
+            Discover all Tahiti has to offer.
+          </p>
+          <div class="island-select-wrapper">
+            <select class="island-select">
+              <option value="" disabled selected>Select an island</option>
+              <option value="bora-bora">Bora Bora</option>
+              <option value="moorea">Moorea</option>
+              <option value="raiatea">Ra'iātea</option>
+              <option value="tahaa">Taha'a</option>
+            </select>
+            <button class="explore-btn">EXPLORE</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience d-flex flex-column" id="experience">
+        <div class="container d-flex flex-column justify-content-between h-100">
+          <div class="section-text">
+            <h3 class="section-title section-title-experience">
+              <span>Experience</span> Tahiti
+            </h3>
+            <p class="section-subtitle section-subtitle-experience">
+              Just pick your destination. Our travel experts will take care of
+              the rest.
+            </p>
+          </div>
+
+          <div
+            class="section-text-bottom d-flex flex-column justify-content-end text-center align-items-center"
+          >
+            <p class="section-bottom-text">
+              The beauty, drama, and power of today’s Tahitian dance testify to
+              its resilience in Polynesian culture. In ancient times, dances
+              were directly linked with all aspects of life. One would dance for
+              joy, to welcome a visitor, to pray to a god, to challenge an
+              enemy, and to seduce a mate.
+            </p>
+            <a href="#" class="btn-section btn-learn-more">LEARN MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-tahiti" id="travel">
+        <div class="container">
+          <h3 class="section-title section-title-experience text-center">
+            <span>Why</span> Tahiti
+          </h3>
+
+          <div
+            class="row d-flex justify-content-lg-between justify-content-center why-tahiti-row"
+          >
+            <div class="col-12 col-md-6 col-lg-3 why-tahiti-col text-center">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 why-tahiti-col text-center">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 why-tahiti-col text-center">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vacation-section" id="about">
+        <div class="overlay"></div>
+        <div class="vacation-content">
+          <h4 class="vacation-title">
+            Unique vacations, tailored to your desires
+          </h4>
+          <p class="vacation-subtitle">
+            Our travel experts will take care of everything. Whether choosing
+            from our packaged vacations or customizing your own, extraordinary
+            service and exceptional value are just a call or click away.
+          </p>
+          <button class="btn-section btn-book">BOOK NOW</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-white pt-5 pb-4">
+      <div class="container">
+        <div class="d-flex justify-content-between flex-wrap">
+          <div class="footer-column">
+            <a class="footer-logo" href="#">
+              <img src="assets/images/logo-main.png" alt="logo"
+            /></a>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-title">ISLANDS</h5>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a href="#" class="footer-link">Tahiti</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Bora Bora</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Moorea</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Huahine</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Raiatea</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Taha’a</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Rangiroa</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Tikehau</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Fakarava</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Tetiaroa</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Manihi</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Marquesas</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Australs</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-title">PACKAGES</h5>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a href="#" class="footer-link">Honeymoons</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Cruises</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Value Vacations</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Weddings</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Active Adventures</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Luxury Escapes</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Festivals and Events</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Family Friendly</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Tailor a Package</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-title">TAHITI</h5>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a href="#" class="footer-link">About Us</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Reviews</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Contact Us</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Careers</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Terms and Conditions</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <div class="footer-social">
+              <a href="#" class="social-link facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" class="social-link pinterest"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+              <a href="#" class="social-link twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="social-link instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link youtube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

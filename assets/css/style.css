@@ -1,0 +1,1127 @@
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.woff') format('woff'),
+        url('../fonts/Gotham-Bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.woff') format('woff'),
+        url('../fonts/Gotham-Book.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Bookitalic';
+    src: url('../fonts/Gotham-Bookitalic.woff') format('woff'),
+        url('../fonts/Gotham-Bookitalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.woff') format('woff'),
+        url('../fonts/Gotham-Light.woff2') format('woff2');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Gotham-Lightitalic';
+    src: url('../fonts/Gotham-Lightitalic.woff') format('woff'),
+        url('../fonts/Gotham-Lightitalic.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+:root{
+    --primary-color: #333;
+    --red-color: #EE2255;
+    --green-color: #3DBE98;
+    --white-color: #FFF;
+}
+html, body{
+    height: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-width: 320px;
+    font-family: 'Gotham-Book', sans-serif;
+    font-size: 18px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1482px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* header */
+.header{
+    padding: 50px 0;
+}
+.navbar-nav{
+    gap: 90px;
+}
+.nav-link{
+    color: var(--red-color);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Book', sans-serif;
+    transition: all .4s ease;
+    font-weight: normal;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    color: var(--red-color);
+}
+
+/* hero section */
+.hero-section{
+    height: calc(100vh - 150px);
+}
+.slick-slider-container {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 150px);
+}
+
+.slick-slider-container .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slick-slider-container .slider div {
+    position: relative;
+}
+
+.slick-slider-container .slider div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 44, 93, 0.25);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.hero-content-title {
+    font-size: 60px;
+}
+.hero-content-title span{
+    font-family: 'Gotham-Bold', sans-serif;
+}
+.hero-content-desc {
+    font-size: 30px;
+}
+
+.slick-slider-container .slider {
+    display: flex;
+}
+
+.slick-slider-container .slick-prev,
+.slick-slider-container .slick-next {
+    display: none;
+}
+
+.slick-slider-container .slick-dots {
+    display: none;
+}
+
+
+/* islands */
+.islands-section{
+    padding: 100px 0;
+    background-color: rgba(235, 237, 164, 0.2);
+}
+.section-title{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--green-color);
+    font-weight: lighter;
+    font-family: 'Gotham-Light', sans-serif;
+}
+.section-title span{
+    font-family: 'Gotham-Bold', sans-serif;
+}
+.section-subtitle{
+    font-size: 18px;
+}
+.islands-wrapper {
+    padding: 20px 0;
+    position: relative;
+    margin: 60px 0 100px;
+}
+.islands-slider{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.island-card {
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.island-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.island-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.island-card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.island-card-title {
+    color: var(--green-color);
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.island-card-desc {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.island-card-button {
+    background: var(--green-color);
+    color: white;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+    padding: 14px 24px;
+}
+
+.island-card:hover .island-card-button {
+    background: var(--green-color);
+}
+
+.price-label {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.95;
+    margin-right: 6px;
+    letter-spacing: 1px;
+}
+
+.price-value {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.island-card:hover .arrow {
+    transform: translateX(4px);
+}
+.offer{
+    font-size: 24px;
+    color: #333;
+    opacity: 0.6;
+}
+.island-select-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.island-select {
+    width: 832px;
+    padding: 14px 18px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #333;
+    appearance: none;
+    cursor: pointer;
+}
+
+.explore-btn {
+    width: 300px;
+    background: var(--green-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #2fa87f;
+}
+
+/* experince */
+.experience{
+    padding: 100px 0;
+    background: url('../images/experience.webp') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+}
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.experience .container {
+    position: relative;
+    z-index: 2;
+}
+.container-experience{
+    padding: 0 20px;
+}
+.section-title-experience{
+    color: var(--red-color);
+}
+.section-subtitle-experience{
+    color: var(--white-color);
+}
+.section-text-bottom {
+    margin-bottom: 20px;
+}
+.section-bottom-text {
+    color: var(--white-color);
+    font-size: 18px;
+    font-family: 'Gotham-Bookitalic', sans-serif;
+    max-width: 980px;
+}
+.btn-section{
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    padding: 30px 20px;
+    width: 300px;
+}
+.btn-learn-more {
+    margin-top: 20px;
+    background-color: var(--red-color);
+}
+.btn-learn-more:hover {
+    background-color: #d13c3c;
+}
+
+/* why tahiti */
+.why-tahiti{
+    padding: 100px 0;
+}
+.why-tahiti-row {
+    margin-top: 40px;
+}
+.why-tahiti-col {
+    max-width: 350px;
+}
+
+/* book now */
+.vacation-section{
+    padding: 100px 0;
+    background: url('../images/unique.webp') no-repeat center center/cover;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 1230px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.vacation-content{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    max-width: 872px;
+}
+.vacation-title{
+    font-size: 40px;
+    font-family: 'Gotham-Bold', sans-serif;
+    color: var(--white-color);
+}
+.vacation-subtitle{
+    font-size: 18px;
+    margin: 40px 0;
+    color: var(--white-color);
+}
+.btn-book{
+    background-color: var(--green-color);
+    border: none;
+    outline: none;
+}
+.btn-book:hover{
+    background: #2fa87f;
+}
+
+/* footer */
+.footer {
+    padding: 100px 0;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+.footer-title{
+    color: var(--red-color);
+    font-size: 18px;
+    font-family: 'Gotham-Bold', sans-serif;
+    margin-bottom: 30px;
+}
+.footer-list{
+    padding: 0;
+    margin: 0;
+}
+.footer-link {
+    color: var(--red-color);
+    font-family: 'Gotham-Light', sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+}
+.social-link {
+    font-size: 40px;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+}
+.social-link:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.social-link.facebook {
+    color: #1877f2;
+}
+.social-link.pinterest {
+    color: #bd081c;
+}
+.social-link.twitter {
+    color: #1da1f2;
+}
+.social-link.instagram {
+    color: #e1306c;
+}
+.social-link.youtube {
+    color: #ff0000;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+.footer-column:first-child {
+    flex: 0 0 auto;
+}
+.footer-column:last-child {
+    flex: 0 0 auto;
+    min-width: auto;
+}
+/* responsive */
+
+@media (max-width: 1302px){
+    .hero-content-title {
+        font-size: 50px;
+    }
+    .hero-content-desc {
+        font-size: 25px;
+    }
+}
+@media (max-width: 1200px) {   
+    .navbar-nav{
+        gap: 60px;
+    }
+    .islands-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .overlay {
+        width: 900px;
+        height: 400px;
+    }
+    .vacation-title {
+        font-size: 32px;
+    }
+    .vacation-subtitle {
+        font-size: 16px;
+    }
+    .footer {
+        padding: 80px 0;
+    }
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .social-link {
+        font-size: 35px;
+    }    
+}
+@media (max-width: 1086px){
+    .hero-content-title {
+        font-size: 40px;
+    }
+    .hero-content-desc {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .islands-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(to left, white, transparent);
+        z-index: 2;
+    }
+    .islands-slider {
+        display: block;
+    }
+    .footer-logo{
+        width: 120px;
+    }
+    .social-link{
+        margin-left: 0;
+        font-size: 25px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .footer-title{
+        margin-bottom: 15px;
+    }
+    .experience {
+        padding: 80px 0;
+        min-height: 550px;
+    }
+
+    .section-title-experience {
+        font-size: 42px;
+    }
+
+    .section-subtitle-experience {
+        font-size: 18px;
+    }
+
+    .section-bottom-text {
+        font-size: 17px;
+        max-width: 850px;
+    }
+    .islands-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .section-subtitle {
+        font-size: 17px;
+    }
+
+    .islands-wrapper {
+        margin: 50px 0 80px;
+    }
+
+    .offer-text {
+        font-size: 22px;
+    }
+
+    .island-select-wrapper {
+        margin-top: 35px;
+    }
+
+    .island-select {
+        width: 600px;
+        font-size: 15px;
+    }
+
+    .explore-btn {
+        width: 250px;
+        font-size: 15px;
+    }
+    .island-card:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+}
+@media(max-width: 992px) {
+    .slick-slider-container {
+        height: auto;
+    }
+    .header{
+        padding: 20px 0;
+    }
+    .logo{
+        width: 130px;
+    }
+    .overlay {
+        width: 750px;
+        height: 350px;
+    }
+    .vacation-title {
+        font-size: 28px;
+    }
+    .vacation-content{
+        max-width: 700px;
+    }
+    .vacation-subtitle {
+        font-size: 14px;
+    }
+    .btn-section{
+        width: 250px;
+        padding: 20px 15px;
+    }
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .footer {
+        padding: 50px 0 30px;
+    }
+    .footer .d-flex {
+        gap: 30px;
+    }
+    .footer-column {
+        flex: 0 0 calc(50% - 15px);
+        min-width: auto;
+    }
+    .footer-column:first-child,
+    .footer-column:last-child {
+        flex: 0 0 100%;
+    }
+    .footer-social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 870px) {
+    .hero-content-title {
+        font-size: 35px;
+    }
+    .hero-content-desc {
+         font-size: 20px;
+    }
+}
+@media(max-width: 768px) {
+    .islands-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .logo{
+        width: 100px;
+    }
+    .hero-content-title {
+        font-size: 30px;
+    }
+    .hero-content-desc {
+        font-size: 18px;
+    }
+    .hero{
+        height: auto;
+    }
+    .overlay {
+        width: 600px;
+        height: 300px;
+    }
+    .vacation-title {
+        font-size: 24px;
+    }
+    .vacation-subtitle {
+        font-size: 14px;
+        margin: 20px 0;
+    }    
+    .vacation-content{
+        max-width: 500px;
+    }
+    .btn-section{
+        width: 200px;
+        padding: 15px 10px;
+    }
+    .footer {
+        padding: 40px 0 30px;
+    }
+    
+    .footer .d-flex {
+        flex-direction: column;
+        gap: 35px;
+    }
+    
+    .footer-column {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        display: block;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        max-width: 130px;
+    }
+    
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-link {
+        font-size: 13px;
+    }
+    
+    .social-link {
+        font-size: 32px;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .experience {
+        padding: 60px 0 20px;
+        min-height: 100vh;
+    }
+    .experience .container {
+        padding: 0 20px;
+    }
+    .section-text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .section-title-experience {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    .section-subtitle-experience {
+        font-size: 16px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .section-text-bottom {
+        margin-bottom: 30px;
+    }
+    .section-bottom-text {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .btn-learn-more {
+        width: 100%;
+        max-width: 200px;
+        padding: 12px 20px;
+    }
+    .islands-section {
+        padding: 60px 0;
+    }
+
+    .section-text {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .islands-wrapper {
+        margin: 40px 0 60px;
+        padding: 15px 0;
+    }
+
+    .offer-text {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .island-select-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    .island-select {
+        width: 100%;
+        max-width: 500px;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .explore-btn {
+        width: 100%;
+        max-width: 500px;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+}
+@media(max-width: 650px){
+    .hero-content-title {
+        font-size: 25px;
+    }
+    .hero-content-desc {
+        font-size: 16px;
+    }
+}
+@media (max-width: 576px) {
+    .overlay {
+        width: 100%;
+        height: 300px;
+    }
+    .vacation-title {
+        font-size: 22px;
+    }
+    .vacation-content{
+        padding: 20px;
+    }
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer-title {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .experience {
+        padding: 40px 0;
+        min-height: 100vh;
+    }
+
+    .experience .container {
+        padding: 0 15px;
+    }
+
+    .section-text {
+        margin-bottom: 50px;
+    }
+
+    .section-title-experience {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .section-title-experience span {
+        display: block;
+    }
+
+    .section-subtitle-experience {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .section-text-bottom {
+        margin-bottom: 25px;
+    }
+    .section-bottom-text {
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+    .btn-learn-more {
+        font-size: 14px;
+        margin-top: 25px;
+    } 
+    .islands-section {
+        padding: 50px 0;
+    }
+
+    .section-text {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+    }
+
+    .islands-wrapper {
+        margin: 35px 0 50px;
+        padding: 10px 0;
+    }
+
+    .offer-text {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    .island-select-wrapper {
+        margin-top: 25px;
+        padding: 0 15px;
+    }
+
+    .island-select {
+        font-size: 14px;
+        padding: 11px 14px;
+    }
+
+    .explore-btn {
+        font-size: 14px;
+        padding: 11px 14px;
+    } 
+}
+@media(max-width: 545px){
+    .hero-content-title {
+        font-size: 20px;
+    }
+    .hero-content-desc {
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0 25px;
+    }
+
+    .footer .container {
+        padding: 0 10px;
+    }
+
+    .footer .d-flex {
+        gap: 30px;
+    }
+
+    .footer-logo img {
+        max-width: 110px;
+    }
+
+    .footer-title {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .footer-item {
+        margin-bottom: 8px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+    }
+
+    .social-link {
+        font-size: 28px;
+    }
+
+    .footer-social {
+        gap: 12px;
+    }
+    .experience {
+        padding: 30px 0;
+    }
+
+    .section-title-experience {
+        font-size: 24px;
+    }
+
+    .section-subtitle-experience {
+        font-size: 14px;
+    }
+
+    .section-bottom-text {
+        font-size: 14px;
+    }
+    .islands-section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-title span {
+        display: block;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .islands-wrapper {
+        margin: 30px 0 40px;
+    }
+
+    .offer-text {
+        font-size: 16px;
+    }
+
+    .island-select-wrapper {
+        margin-top: 20px;
+    }
+
+    .island-select,
+    .explore-btn {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+@media(max-width: 430px){
+    .hero-content-title {
+        font-size: 18px;
+    }
+    .hero-content-desc {
+        font-size: 14px;
+    }
+}
+@media (max-width: 360px) {
+    .footer {
+        padding: 25px 0 20px;
+    }
+
+    .footer-logo img {
+        max-width: 100px;
+    }
+
+    .social-link {
+        font-size: 26px;
+    }
+
+    .footer-social {
+        gap: 10px;
+    }
+    .experience {
+        padding: 25px 0;
+    }
+
+    .experience .container {
+        padding: 0 10px;
+    }
+
+    .section-title-experience {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .section-subtitle-experience {
+        font-size: 13px;
+    }
+
+    .section-bottom-text {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    .islands-section {
+        padding: 35px 0;
+    }
+
+    .section-text {
+        padding: 0 10px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+    }
+
+    .islands-wrapper {
+        margin: 25px 0 35px;
+    }
+
+    .offer-text {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .island-select-wrapper {
+        padding: 0 10px;
+    }
+
+    .island-select,
+    .explore-btn {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+}
